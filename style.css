@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Animação suave ao clicar nos links do menu */
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: #2b2d42;
@@ -13,7 +17,7 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -61,12 +65,12 @@ body {
 .hero {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: #ffffff;
-    padding: 80px 0;
+    padding: 70px 0;
     text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -75,7 +79,7 @@ body {
     font-size: 1.1rem;
     color: #94a3b8;
     max-width: 650px;
-    margin: 0 auto 30px;
+    margin: 0 auto 25px;
 }
 
 .btn-primary {
@@ -97,19 +101,26 @@ body {
 .section-title {
     text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #0f172a;
 }
 
-/* Seção de Plataformas */
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+/* Plataformas */
 .platforms-section {
-    padding: 60px 0;
+    padding: 50px 0;
     background-color: #ffffff;
 }
 
 .platforms-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -121,84 +132,208 @@ body {
     text-align: center;
 }
 
-.platform-card h3 {
-    font-size: 1.1rem;
-    color: #1e293b;
-    margin-bottom: 10px;
-}
-
-.platform-card p {
-    font-size: 0.88rem;
-    color: #64748b;
-}
-
-/* Seção de Artigos */
+/* Estrutura dos Artigos */
 .blog-section {
     padding: 60px 0;
 }
 
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.post-card {
+.article-box {
     background-color: #ffffff;
-    border-radius: 8px;
     border: 1px solid #e2e8f0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.post-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.post-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    border-radius: 12px;
+    padding: 35px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .tag {
-    align-self: flex-start;
+    display: inline-block;
     background-color: #eff6ff;
     color: #2563eb;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     text-transform: uppercase;
 }
 
-.post-content h3 {
-    font-size: 1.2rem;
+.article-box h2 {
+    font-size: 1.6rem;
     color: #0f172a;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.post-content p {
-    font-size: 0.95rem;
-    color: #475569;
+.article-intro {
+    font-size: 1.05rem;
+    color: #334155;
     margin-bottom: 20px;
-    flex-grow: 1;
 }
 
-.read-more {
-    color: #2563eb;
+.article-box h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin: 20px 0 10px 0;
+}
+
+.article-box p {
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.article-box ul, .article-box ol {
+    margin: 10px 0 20px 25px;
+    color: #475569;
+}
+
+.article-box li {
+    margin-bottom: 8px;
+}
+
+/* Caixa de CTA com Botões de Afiliados */
+.cta-box {
+    background-color: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 25px;
+}
+
+.cta-box h4 {
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.btn-affiliate {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.btn-affiliate:hover {
+    opacity: 0.9;
+}
+
+/* Cores das marcas */
+.btn-affiliate.shopee { background-color: #ee4d2d; }
+.btn-affiliate.shein { background-color: #000000; }
+.btn-affiliate.ml { background-color: #293845; }
+.btn-affiliate.tiktok { background-color: #010101; }
+.btn-affiliate.aliexpress { background-color: #ff4747; }
+
+/* Vitrine de Produtos */
+.products-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.badge {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.shopee-badge { background-color: #ee4d2d; }
+.ml-badge { background-color: #293845; }
+.ali-badge { background-color: #ff4747; }
+
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.btn-product {
+    display: block;
+    text-align: center;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-.read-more:hover {
-    text-decoration: underline;
+.btn-product:hover {
+    background-color: #1d4ed8;
+}
+
+/* Seção Sobre */
+.about-section {
+    padding: 60px 0;
+}
+
+.about-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-box p {
+    color: #475569;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-info h4 {
+    color: #0f172a;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    color: #64748b;
 }
 
 /* Footer */
@@ -217,21 +352,17 @@ body {
     font-size: 0.8rem;
 }
 
-/* Responsividade para telas menores */
+/* Ajustes para Mobile */
 @media (max-width: 600px) {
-    .nav-container {
-        flex-direction: column;
-        justify-content: center;
-        gap: 10px;
-        height: auto;
-        padding: 15px 0;
-    }
-    
-    .nav a {
-        margin: 0 10px;
+    .article-box, .about-box {
+        padding: 20px;
     }
 
-    .hero-content h1 {
-        font-size: 1.8rem;
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn-affiliate {
+        text-align: center;
     }
 }
