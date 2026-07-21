@@ -6,13 +6,13 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Animação suave ao clicar nos links do menu */
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #2b2d42;
-    background-color: #f8f9fa;
+    color: #334155;
+    background-color: #f8fafc;
     line-height: 1.6;
 }
 
@@ -25,7 +25,7 @@ body {
 /* Header */
 .header {
     background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,7 +41,7 @@ body {
 .logo {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #1e293b;
+    color: #0f172a;
     text-decoration: none;
 }
 
@@ -50,10 +50,11 @@ body {
 }
 
 .nav a {
-    margin-left: 20px;
+    margin-left: 18px;
     text-decoration: none;
     color: #475569;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 500;
     transition: color 0.2s;
 }
 
@@ -63,14 +64,14 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: #ffffff;
     padding: 70px 0;
     text-align: center;
 }
 
 .hero-content h1 {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     margin-bottom: 15px;
     font-weight: 700;
 }
@@ -78,7 +79,7 @@ body {
 .hero-content p {
     font-size: 1.1rem;
     color: #94a3b8;
-    max-width: 650px;
+    max-width: 680px;
     margin: 0 auto 25px;
 }
 
@@ -97,10 +98,36 @@ body {
     background-color: #1d4ed8;
 }
 
-/* Títulos de Seção */
+/* Espaços Reservados para Anúncios (AdSense) */
+.ad-wrapper {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.adsense-placeholder {
+    background-color: #f1f5f9;
+    border: 1px dashed #cbd5e1;
+    border-radius: 6px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.ad-notice {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+/* Seções e Títulos */
 .section-title {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     margin-bottom: 30px;
     color: #0f172a;
 }
@@ -112,56 +139,35 @@ body {
     margin-bottom: 30px;
 }
 
-/* Plataformas */
-.platforms-section {
-    padding: 50px 0;
-    background-color: #ffffff;
-}
-
-.platforms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.platform-card {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Estrutura dos Artigos */
+/* Artigos */
 .blog-section {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 .article-box {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 35px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    margin-bottom: 35px;
 }
 
 .tag {
     display: inline-block;
     background-color: #eff6ff;
     color: #2563eb;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    padding: 4px 12px;
+    padding: 4px 10px;
     border-radius: 20px;
     margin-bottom: 15px;
     text-transform: uppercase;
 }
 
 .article-box h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #0f172a;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .article-intro {
@@ -171,7 +177,7 @@ body {
 }
 
 .article-box h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: #1e293b;
     margin: 20px 0 10px 0;
 }
@@ -190,7 +196,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Caixa de CTA com Botões de Afiliados */
+/* Caixas de CTA de Afiliados */
 .cta-box {
     background-color: #f8fafc;
     border-left: 4px solid #2563eb;
@@ -213,12 +219,12 @@ body {
 
 .btn-affiliate {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 18px;
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     border-radius: 6px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     transition: opacity 0.2s;
 }
 
@@ -226,29 +232,60 @@ body {
     opacity: 0.9;
 }
 
-/* Cores das marcas */
 .btn-affiliate.shopee { background-color: #ee4d2d; }
 .btn-affiliate.shein { background-color: #000000; }
-.btn-affiliate.ml { background-color: #293845; }
+.btn-affiliate.ml { background-color: #1e293b; }
 .btn-affiliate.tiktok { background-color: #010101; }
-.btn-affiliate.aliexpress { background-color: #ff4747; }
+.btn-affiliate.aliexpress { background-color: #e62e04; }
 
-/* Vitrine de Produtos */
-.products-section {
+/* Plataformas */
+.platforms-section {
+    padding: 50px 0;
     background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.platform-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 22px;
+    text-align: center;
+}
+
+.platform-card h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.platform-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Vitrine de Achadinhos */
+.products-section {
     padding: 60px 0;
 }
 
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 .product-card {
     border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    padding: 25px;
+    border-radius: 8px;
+    padding: 22px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -257,7 +294,7 @@ body {
 
 .badge {
     align-self: flex-start;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     padding: 3px 8px;
     border-radius: 4px;
@@ -266,19 +303,19 @@ body {
 }
 
 .shopee-badge { background-color: #ee4d2d; }
-.ml-badge { background-color: #293845; }
-.ali-badge { background-color: #ff4747; }
+.ml-badge { background-color: #1e293b; }
+.ali-badge { background-color: #e62e04; }
 
 .product-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #0f172a;
     margin-bottom: 8px;
 }
 
 .product-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #64748b;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .btn-product {
@@ -286,54 +323,57 @@ body {
     text-align: center;
     background-color: #2563eb;
     color: #ffffff;
-    padding: 10px;
+    padding: 9px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
 }
 
 .btn-product:hover {
     background-color: #1d4ed8;
 }
 
-/* Seção Sobre */
-.about-section {
-    padding: 60px 0;
+/* Seção Sobre e Privacidade */
+.about-section, .privacy-section {
+    padding: 50px 0;
 }
 
-.about-box {
+.about-box, .privacy-box {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 40px;
-    text-align: center;
-    max-width: 800px;
+    border-radius: 10px;
+    padding: 35px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.about-box p {
+.privacy-box h2 {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.privacy-box h3 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin: 20px 0 8px 0;
+}
+
+.privacy-box p {
+    font-size: 0.95rem;
     color: #475569;
-    font-size: 1.05rem;
-    margin-bottom: 20px;
-    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.privacy-box a {
+    color: #2563eb;
 }
 
 .contact-info {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 25px;
+    padding-top: 15px;
     border-top: 1px solid #e2e8f0;
-}
-
-.contact-info h4 {
-    color: #0f172a;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.contact-info p {
-    font-size: 0.95rem;
-    color: #64748b;
 }
 
 /* Footer */
@@ -342,7 +382,8 @@ body {
     color: #94a3b8;
     padding: 40px 0;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
+    margin-top: 40px;
 }
 
 .footer small {
@@ -352,9 +393,21 @@ body {
     font-size: 0.8rem;
 }
 
-/* Ajustes para Mobile */
+/* Responsivo */
 @media (max-width: 600px) {
-    .article-box, .about-box {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+        gap: 10px;
+    }
+
+    .nav a {
+        margin: 0 8px;
+        font-size: 0.85rem;
+    }
+
+    .article-box, .about-box, .privacy-box {
         padding: 20px;
     }
 
