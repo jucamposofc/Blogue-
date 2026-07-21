@@ -1,2 +1,2 @@
-# Blogue-
-Como ganhar dinheiro na internet 
+# Blog-
+Como ganhar dinheiro na internet
